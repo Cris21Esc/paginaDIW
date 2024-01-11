@@ -1,0 +1,53 @@
+@media only screen and (max-width:768px) {
+   .desplegable{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    
+    
+   }
+
+   li{
+      width: 40%;
+     font-size: 2vh;
+     margin-bottom: 20px;
+   }
+
+   header{
+      font-size: 8px;
+      
+   }
+
+   .toggle-icon {
+      width: 80%;
+      margin: -2.2em auto 8 0.2em;
+      top: 35px;
+   }
+
+   footer{
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 12vh;
+      width: 100%;
+   }
+   .caja{
+      width: 45%;
+      height: 30vh;
+     
+      
+   }
+   $personaje:"luke","skywalker","klipartz","klipartzpollo";
+
+   @each $persona in $personaje{
+       .#{$persona}{
+      background-image: url("../img/#{$persona}.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border-bottom: black solid 3px;
+     
+      }
+   }
+
+}
+

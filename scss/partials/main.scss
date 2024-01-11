@@ -1,0 +1,128 @@
+
+.estrellas{
+  position: relative;
+  height: 1000px;
+  z-index: -10;
+}
+
+#stars,
+#stars2,
+#stars3 {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  animation: animStar 100s linear infinite;
+}
+
+#stars {
+  box-shadow: $shadows-small;
+  &:after {
+    content: " ";
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+  }
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  box-shadow: $shadows-medium;
+  animation: animStar 200s linear infinite;
+  &:after {
+    content: " ";
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+  }
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  box-shadow: $shadows-big;
+  animation: animStar 300s linear infinite;
+  &:after {
+    content: " ";
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-big;
+  }
+}
+
+#title {
+  position: relative;
+  top: 35%;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Star Wars', sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+}
+
+#title span {
+  background: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.boton{
+  border: black;
+  border-radius: 5px;
+  font-family: 'Star Wars', sans-serif;
+  color: #090A0F;
+  background-color: white;
+  width: 40%;  
+  height: 50px; 
+  font-size: x-large;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+.contenedor-producto {
+  width: 600px;
+  height: 550px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-principal {
+  width: 600px;
+  height: 400px;
+  border: 1px solid #ff0000;
+}
+
+[class *="subImagen-"] {
+  width: 25%;
+  height: 150px;
+  border: 1px solid #0000ff;
+}
+
+#caja-video{
+  width: 40%;
+  margin: auto;
+  padding-top: 20px;
+}
+
+video{
+  max-width: 100%;
+}
